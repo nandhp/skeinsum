@@ -1,6 +1,6 @@
 # Copyright (C) 2011 Casey Marshall
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.6)
 PROJECT(skeinsum)
 set (VERSION, 0.0.1)
 set (SKEIN3FISH_VERSION 0.6.0)
@@ -41,5 +41,6 @@ set(threefish_src
 set(skeinsum_src skeinsum.c)
 
 add_executable(skeinsum ${skein_src} ${threefish_src} ${skeinsum_src})
+add_executable(xkcd ${skein_src} ${threefish_src} xkcd.c)
 
 install(TARGETS skeinsum DESTINATION bin)
